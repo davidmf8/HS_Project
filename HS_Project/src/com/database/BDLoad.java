@@ -6,9 +6,9 @@ import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class BDLoad extends SQLiteOpenHelper{
-	private String SQLiteCartas = "CREATE TABLE CARTA (nombre TEXT PRIMARY KEY, nuevoMensaje INTEGER)";
-	private String SQLiteMazos = "CREATE TABLE MAZO (mensaje TEXT, nombre TEXT, tipo INTEGER, fecha TEXT, autorgrupo TEXT)";
-	private String SQLiteMazosDescargados = "CREATE TABLE MAZODESCARGADO (mensaje TEXT, nombre TEXT, tipo INTEGER, fecha TEXT, autorgrupo TEXT)";
+	private String SQLiteCartas = "CREATE TABLE CARTA (nombre TEXT PRIMARY KEY, tipo TEXT, clase TEXT, set TEXT, rareza TEXT, coste INTEGER, ataque INTEGER, defensa INTEGER, descripcion TEXT, numcopias INTEGER)";
+	private String SQLiteMazos = "CREATE TABLE MAZO (nombre TEXT PRIMARY KEY, numcartas INTEGER, clase TEXT)";
+	private String SQLiteMazosDescargados = "CREATE TABLE MAZODESCARGADO (nombre TEXT PRIMARY KEY, numcartas INTEGER, clase TEXT, fechaactualizacion TEXT)";
 
 	public BDLoad(Context context, String name, CursorFactory factory, int version) {
 		super(context, name, factory, version);
