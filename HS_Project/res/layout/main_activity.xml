@@ -23,7 +23,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="60dp"
             android:background="@drawable/button"
-            android:text="Button1" />
+            android:onClick="onClick"
+            android:text="My Collection" />
 
         <Button
             android:id="@+id/Button2"
