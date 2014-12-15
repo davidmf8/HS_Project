@@ -23,5 +23,7 @@ public class collection_activity extends Activity {
         drawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
         drawerList = (ListView) findViewById(R.id.left_drawer);
         
+        drawerList.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, searchMenuOptions));
+
        }
 }
