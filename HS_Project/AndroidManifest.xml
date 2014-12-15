@@ -28,6 +28,18 @@
 			android:label="@string/col_name" 
 			android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
 		</activity> 
+		
+		<activity
+			android:name="com.main.mydecks_activity"
+			android:label="@string/col_name" 
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+		</activity> 
+		
+		<activity
+			android:name="com.main.netdecks_activity"
+			android:label="@string/col_name" 
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+		</activity> 
         
         
     </application>

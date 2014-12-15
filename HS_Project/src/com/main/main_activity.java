@@ -21,9 +21,19 @@ public class main_activity extends Activity{
 	}
 	
 	public void onClick(View v){
-		if(v.getId() == R.id.Button1){
-			Intent intent = new Intent(main_activity.this, collection_activity.class);
-			startActivity(intent);
+		switch(v.getId()){
+		  case R.id.colection:
+			  Intent colectionActivity = new Intent(main_activity.this, collection_activity.class);
+			  startActivity(colectionActivity);
+		      break;
+		  case R.id.mydecks:
+			  Intent decksActivity = new Intent(main_activity.this, mydecks_activity.class);
+			  startActivity(decksActivity);
+			  break;
+		  case R.id.netdecks:
+			  Intent netActivity = new Intent(main_activity.this, netdecks_activity.class);
+			  startActivity(netActivity);
+			  break;
 		}
 	}
 	
