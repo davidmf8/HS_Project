@@ -17,14 +17,14 @@ public class main_activity extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main_activity);
 		
-		collection = (Button)findViewById(R.id.Button1);
+		collection = (Button)findViewById(R.id.collection);
 	}
 	
 	public void onClick(View v){
 		switch(v.getId()){
-		  case R.id.colection:
-			  Intent colectionActivity = new Intent(main_activity.this, collection_activity.class);
-			  startActivity(colectionActivity);
+		  case R.id.collection:
+			  Intent collectionActivity = new Intent(main_activity.this, collection_activity.class);
+			  startActivity(collectionActivity);
 		      break;
 		  case R.id.mydecks:
 			  Intent decksActivity = new Intent(main_activity.this, mydecks_activity.class);
