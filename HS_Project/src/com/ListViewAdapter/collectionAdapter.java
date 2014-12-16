@@ -12,6 +12,13 @@ import android.widget.ImageView;
 public class collectionAdapter extends BaseAdapter {
     private Context mContext;
     private Integer[] myCollection = {R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon,
+    		R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon,
+    		R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon,
+    		R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon,
+    		R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon,
+    		R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon,
+    		R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon,
+    		R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon,
     		R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon};
  
     public collectionAdapter(Context c) {
