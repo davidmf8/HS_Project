@@ -20,7 +20,7 @@ public class collectionAdapter extends BaseAdapter {
     		R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon,
     		R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon,
     		R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon};
- 
+    
     public collectionAdapter(Context c) {
         mContext = c;
     }
