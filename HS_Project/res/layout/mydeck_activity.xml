@@ -1,8 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
-    
+    android:orientation="vertical" 
+    android:background="@drawable/mydeckbackground">
 
-</LinearLayout>
+    <Button
+        android:id="@+id/deckheader"
+        android:layout_width="140dp"
+        android:layout_height="56dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/magedeckheader"/>
+
+    <Button
+        android:id="@+id/deckbutton1"
+        android:layout_width="39dp"
+        android:layout_height="56dp"
+        android:layout_alignBaseline="@+id/deckheader"
+        android:layout_alignBottom="@+id/deckheader"
+        android:layout_toRightOf="@+id/deckheader"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/redbutton1" />
+    
+    <Button
+        android:id="@+id/deckbutton2"
+        android:layout_width="39dp"
+        android:layout_height="56dp"
+        android:layout_alignBaseline="@+id/deckbutton1"
+        android:layout_alignBottom="@+id/deckbutton1"
+        android:layout_toRightOf="@+id/deckbutton1"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/redbutton2" />
+    
+    <Button
+        android:id="@+id/deckbutton3"
+        android:layout_width="39dp"
+        android:layout_height="56dp"
+        android:layout_alignBaseline="@+id/deckbutton2"
+        android:layout_alignBottom="@+id/deckbutton2"
+        android:layout_toRightOf="@+id/deckbutton2"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/redbutton3" />
+
+    <Button
+        android:id="@+id/newdeckbutton"
+        android:layout_width="272dp"
+        android:layout_height="46dp"
+        android:layout_alignLeft="@+id/deckheader"
+        android:layout_below="@+id/deckheader"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/newdeckbutton" />
+
+</RelativeLayout>
