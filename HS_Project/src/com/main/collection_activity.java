@@ -14,7 +14,7 @@ import android.widget.AdapterView.OnItemClickListener;
 
 
 public class collection_activity extends Activity {
-    
+    //Comentario
 	private String[] searchMenuOptions;
 	private String[] searchMenuOptions2;
 	private CustomDrawerLayout customDrawerLayout;
