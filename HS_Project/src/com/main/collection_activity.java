@@ -1,10 +1,10 @@
 package com.main;
 
+import com.ListViewAdapter.collectionAdapter;
 import com.example.hs_project.R;
 
 import com.main.CustomDrawerLayout;
 
-import ListViewAdapter.collectionAdapter;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Gravity;
