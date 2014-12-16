@@ -3,23 +3,24 @@ package com.main;
 import com.example.hs_project.R;
 
 import com.main.CustomDrawerLayout;
+
+import ListViewAdapter.collectionAdapter;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 
 
 public class collection_activity extends Activity {
-    //Comentario
-	private String[] searchMenuOptions;
-	private String[] searchMenuOptions2;
+	private String[] searchMenuOptions, searchMenuOptions2;
 	private CustomDrawerLayout customDrawerLayout;
-	private ListView drawerLeftList;
-	private ListView drawerRightList;
+	private ListView drawerLeftList, drawerRightList;
+	private GridView gridview;
 	
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +61,9 @@ public class collection_activity extends Activity {
                 }
             }
         });
+        
+        gridview = (GridView) findViewById(R.id.gridCollection);// crear el
+        gridview.setAdapter(new collectionAdapter(this));
         
     }
 	
