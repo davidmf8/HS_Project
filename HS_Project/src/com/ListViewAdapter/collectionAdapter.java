@@ -4,6 +4,9 @@ import com.example.hs_project.R;
 import com.example.hs_project.R.layout;
 
 import android.content.Context;
+import android.graphics.Point;
+import android.os.Build;
+import android.view.Display;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,7 +54,20 @@ public class collectionAdapter extends BaseAdapter {
             imageView = new GridHolder();
             imageView.numItem = (ImageView) convertView.findViewById(R.id.item_text);
             imageView.imageItem = (ImageView) convertView.findViewById(R.id.item_image);
-            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+            Display display = ((Activity) mContext).getWindowManager().getDefaultDisplay();
+            Point size = new Point();
+            int ancho, alto;
+            if(Build.VERSION.SDK_INT >=
+                Build.VERSION_CODES.HONEYCOMB_MR2){
+            		display.getSize(size);
+            			ancho = size.x;
+            				alto = size.y;
+            }
+            else {
+            	ancho = display.getWidth();
+            	alto = display.getHeight();
+            }
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ancho, alto/3);
             layoutParams.gravity = Gravity.CENTER;
             layoutParams.setMargins(0, -10, 0, -40);
             imageView.imageItem.setLayoutParams(layoutParams);
