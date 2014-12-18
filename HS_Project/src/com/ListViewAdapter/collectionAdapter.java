@@ -52,7 +52,7 @@ public class collectionAdapter extends BaseAdapter {
             imageView.imageItem = (ImageView) convertView.findViewById(R.id.item_image);
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(400, 400);
             layoutParams.gravity = Gravity.CENTER;
-            layoutParams.setMargins(0, 0, 0, 0);
+            layoutParams.setMargins(0, -10, 0, -40);
             imageView.imageItem.setLayoutParams(layoutParams);
             layoutParams = new LinearLayout.LayoutParams(100, 100);
             layoutParams.gravity = Gravity.CENTER;
