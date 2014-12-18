@@ -1,26 +1,31 @@
 package com.ListViewAdapter;
 
 import com.example.hs_project.R;
+import com.example.hs_project.R.layout;
 
 import android.content.Context;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.view.LayoutInflater;
+import android.app.Activity;
 
 public class collectionAdapter extends BaseAdapter {
     private Context mContext;
-    private Integer[] myCollection = {R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon,
-    		R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon,
-    		R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon,
-    		R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon,
-    		R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon,
-    		R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon,
-    		R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon,
-    		R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon,
-    		R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon, R.drawable.druidicon};
-    
+    private Integer[] myCollection = {R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate,
+    		R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate,
+    		R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate,
+    		R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate,
+    		R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate,
+    		R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate,
+    		R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate,
+    		R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate,
+    		R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate};
+    private int copias = R.drawable.copia1;
     public collectionAdapter(Context c) {
         mContext = c;
     }
@@ -38,20 +43,33 @@ public class collectionAdapter extends BaseAdapter {
     }
  
     public View getView(int position, View convertView, ViewGroup parent) {
-        ImageView imageView;
+        GridHolder imageView;
         if (convertView == null) {
- 
-            imageView = new ImageView(mContext);
-            imageView.setLayoutParams(new GridView.LayoutParams(85, 85));// ancho
-            // y alto
-            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-            imageView.setPadding(8, 8, 8, 8);
+        	LayoutInflater inflater = ((Activity) mContext).getLayoutInflater();
+        	convertView = inflater.inflate(layout.item_gridview, parent, false);
+            imageView = new GridHolder();
+            imageView.numItem = (ImageView) convertView.findViewById(R.id.item_text);
+            imageView.imageItem = (ImageView) convertView.findViewById(R.id.item_image);
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(400, 400);
+            layoutParams.gravity = Gravity.CENTER;
+            layoutParams.setMargins(0, 0, 0, 0);
+            imageView.imageItem.setLayoutParams(layoutParams);
+            layoutParams = new LinearLayout.LayoutParams(100, 100);
+            layoutParams.gravity = Gravity.CENTER;
+            imageView.numItem.setLayoutParams(layoutParams);
+            convertView.setTag(imageView);
         } else {
-            imageView = (ImageView) convertView;
+            imageView = (GridHolder)convertView.getTag();
         }
 
-        imageView.setImageResource(myCollection[position]);
-        return imageView;
+        imageView.imageItem.setImageResource(myCollection[position]);
+        imageView.numItem.setImageResource(copias);
+        return convertView;
+    }
+    
+    static class GridHolder {
+    	ImageView numItem;
+    	ImageView imageItem; 
     }
 
 }
