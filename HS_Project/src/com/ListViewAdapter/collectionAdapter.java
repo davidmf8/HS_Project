@@ -51,7 +51,7 @@ public class collectionAdapter extends BaseAdapter {
             imageView = new GridHolder();
             imageView.numItem = (ImageView) convertView.findViewById(R.id.item_text);
             imageView.imageItem = (ImageView) convertView.findViewById(R.id.item_image);
-            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
             layoutParams.gravity = Gravity.CENTER;
             layoutParams.setMargins(0, -10, 0, -40);
             imageView.imageItem.setLayoutParams(layoutParams);
