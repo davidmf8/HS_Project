@@ -12,6 +12,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.view.LayoutInflater;
+import android.app.ActionBar.LayoutParams;
 import android.app.Activity;
 
 public class collectionAdapter extends BaseAdapter {
@@ -50,7 +51,7 @@ public class collectionAdapter extends BaseAdapter {
             imageView = new GridHolder();
             imageView.numItem = (ImageView) convertView.findViewById(R.id.item_text);
             imageView.imageItem = (ImageView) convertView.findViewById(R.id.item_image);
-            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(400, 400);
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
             layoutParams.gravity = Gravity.CENTER;
             layoutParams.setMargins(0, -10, 0, -40);
             imageView.imageItem.setLayoutParams(layoutParams);
