@@ -56,22 +56,18 @@ public class collectionAdapter extends BaseAdapter {
             imageView.imageItem = (ImageView) convertView.findViewById(R.id.item_image);
             Display display = ((Activity) mContext).getWindowManager().getDefaultDisplay();
             Point size = new Point();
-            int ancho, alto;
-            if(Build.VERSION.SDK_INT >=
-                Build.VERSION_CODES.HONEYCOMB_MR2){
+            int alto;
+            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR2){
             		display.getSize(size);
-            			ancho = size.x;
-            				alto = size.y;
+            			alto = size.y;
             }
             else {
-            	ancho = display.getWidth();
             	alto = display.getHeight();
             }
-            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ancho, alto/3);
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, alto/4);
             layoutParams.gravity = Gravity.CENTER;
-            layoutParams.setMargins(0, -10, 0, -40);
             imageView.imageItem.setLayoutParams(layoutParams);
-            layoutParams = new LinearLayout.LayoutParams(100, 100);
+            layoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
             layoutParams.gravity = Gravity.CENTER;
             imageView.numItem.setLayoutParams(layoutParams);
             convertView.setTag(imageView);
