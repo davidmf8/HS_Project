@@ -3,9 +3,9 @@ package com.main;
 import com.ListViewAdapter.collectionAdapter;
 import com.example.hs_project.R;
 
-import com.main.CustomDrawerLayout;
 
 import android.app.Activity;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -62,9 +62,9 @@ public class collection_activity extends Activity {
             }
         });
         
-        gridview = (GridView) findViewById(R.id.gridCollection);// crear el
+        gridview = (GridView) findViewById(R.id.gridCollection);
         gridview.setAdapter(new collectionAdapter(this));
-        
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 	
 	public void onClick(View v){

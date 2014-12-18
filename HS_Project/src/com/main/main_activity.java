@@ -8,16 +8,15 @@ import android.widget.Button;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 
 public class main_activity extends Activity{
-	
-	private Button collection;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main_activity);
 		
-		collection = (Button)findViewById(R.id.collection);
+		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 	}
 	
 	public void onClick(View v){
