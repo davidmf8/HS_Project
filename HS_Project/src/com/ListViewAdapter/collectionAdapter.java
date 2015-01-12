@@ -82,20 +82,6 @@ public class collectionAdapter extends BaseAdapter {
         } else {
             imageView = (GridHolder)convertView.getTag();
         }
-        
-       /* AssetManager assetManager = mContext.getAssets();
-		BufferedInputStream buf;
-		try {
-			buf = new BufferedInputStream((assetManager.open("Gladiator's Longbow.png")));
-			Bitmap bitmap = BitmapFactory.decodeStream(buf);
-	        @SuppressWarnings("deprecation")
-			Drawable d = new BitmapDrawable(bitmap);
-	        imageView.imageItem.setImageDrawable(d);
-			buf.close();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
 
         imageView.imageItem.setImageResource(myCollection[position]);
         imageView.numItem.setImageResource(copias);
