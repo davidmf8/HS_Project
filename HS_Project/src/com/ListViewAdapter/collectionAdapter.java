@@ -28,15 +28,15 @@ import android.app.Activity;
 
 public class collectionAdapter extends BaseAdapter {
     private Context mContext;
-    private Integer[] myCollection = {R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate,
-    		R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate,
-    		R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate,
-    		R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate,
-    		R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate,
-    		R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate,
-    		R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate,
-    		R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate,
-    		R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate, R.drawable.innervate};
+    private Integer[] myCollection = { R.drawable.c1, R.drawable.c1, R.drawable.c1, R.drawable.c1,
+    		 R.drawable.c1, R.drawable.c1, R.drawable.c1, R.drawable.c1, R.drawable.c1, R.drawable.c1,
+    		 R.drawable.c1, R.drawable.c1, R.drawable.c1, R.drawable.c1, R.drawable.c1, R.drawable.c1, R.drawable.c1,
+    		 R.drawable.c1, R.drawable.c1, R.drawable.c1, R.drawable.c1, R.drawable.c1, R.drawable.c1,
+    		 R.drawable.c1, R.drawable.c1, R.drawable.c1, R.drawable.c1, R.drawable.c1, R.drawable.c1, R.drawable.c1,
+    		 R.drawable.c1, R.drawable.c1, R.drawable.c1, R.drawable.c1, R.drawable.c1, R.drawable.c1, R.drawable.c1,
+    		 R.drawable.c1, R.drawable.c1, R.drawable.c1, R.drawable.c1, R.drawable.c1, R.drawable.c1, R.drawable.c1,
+    		 R.drawable.c1, R.drawable.c1, R.drawable.c1, R.drawable.c1, R.drawable.c1, R.drawable.c1, R.drawable.c1,
+    		 R.drawable.c1, R.drawable.c1, R.drawable.c1};
     private int copias = R.drawable.copia1;
     public collectionAdapter(Context c) {
         mContext = c;
