@@ -1,9 +1,13 @@
 package com.main;
 
+import java.util.ArrayList;
+
 import com.ListViewAdapter.collectionAdapter;
+import com.database.BDAcceso;
 import com.example.hs_project.R;
 
 
+import Utils.staticClass;
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -76,6 +80,11 @@ public class collection_activity extends Activity {
 		  case R.id.deckButton:
 			  customDrawerLayout.openDrawer(Gravity.END);
 			  customDrawerLayout.setDrawerLockMode(CustomDrawerLayout.LOCK_MODE_LOCKED_OPEN, Gravity.END);
+			  break;
+		  case R.id.druidClassIcon:
+			  BDAcceso BD = new BDAcceso(this);
+			  BD.BDopenCards();
+			  ArrayList<String> druidCards = staticClass.formatoDrawable(BD.getCartasPorClase("Druid"));
 			  break;
 		}
 	}
