@@ -29,8 +29,7 @@ public class BDAcceso {
 		Cursor cursor = database.rawQuery(SQLCarta, null);
 		if(cursor.moveToFirst()){
 		  do {
-		    cartas.add(cursor.getString(0));
-		    System.out.println(cursor.getString(0) + cursor.getString(1) + cursor.getString(2)+cursor.getString(3)+cursor.getString(4)+cursor.getString(5)+cursor.getInt(6));
+		    cartas.add(cursor.getString(1));
 		  } while(cursor.moveToNext());
 		}
 		return cartas;	
@@ -42,7 +41,7 @@ public class BDAcceso {
 		Cursor cursor = database.rawQuery(sql, null);
 		if(cursor.moveToFirst()){
 		  do {
-		    cartas.add(cursor.getString(0));
+		    cartas.add(cursor.getString(1));
 		  } while(cursor.moveToNext());
 		}
 		return cartas;	
@@ -54,7 +53,7 @@ public class BDAcceso {
 		Cursor cursor = database.rawQuery(sql, null);
 		if(cursor.moveToFirst()){
 		  do {
-		    cartas.add(cursor.getString(0));
+		    cartas.add(cursor.getString(1));
 		  } while(cursor.moveToNext());
 		}
 		return cartas;	
@@ -66,7 +65,7 @@ public class BDAcceso {
 		Cursor cursor = database.rawQuery(sql, null);
 		if(cursor.moveToFirst()){
 		  do {
-		    cartas.add(cursor.getString(0));
+		    cartas.add(cursor.getString(1));
 		  } while(cursor.moveToNext());
 		}
 		return cartas;	
@@ -78,7 +77,7 @@ public class BDAcceso {
 		Cursor cursor = database.rawQuery(sql, null);
 		if(cursor.moveToFirst()){
 		  do {
-		    cartas.add(cursor.getString(0));
+		    cartas.add(cursor.getString(1));
 		  } while(cursor.moveToNext());
 		}
 		return cartas;	
@@ -90,7 +89,7 @@ public class BDAcceso {
 		Cursor cursor = database.rawQuery(sql, null);
 		if(cursor.moveToFirst()){
 		  do {
-		    cartas.add(cursor.getString(0));
+		    cartas.add(cursor.getString(1));
 		  } while(cursor.moveToNext());
 		}
 		return cartas;	
@@ -102,7 +101,7 @@ public class BDAcceso {
 		Cursor cursor = database.rawQuery(sql, null);
 		if(cursor.moveToFirst()){
 		  do {
-		    cartas.add(cursor.getString(0));
+		    cartas.add(cursor.getString(1));
 		  } while(cursor.moveToNext());
 		}
 		return cartas;	
@@ -114,7 +113,7 @@ public class BDAcceso {
 		Cursor cursor = database.rawQuery(sql, null);
 		if(cursor.moveToFirst()){
 		  do {
-		    cartas.add(cursor.getString(0));
+		    cartas.add(cursor.getString(1));
 		  } while(cursor.moveToNext());
 		}
 		return cartas;	
@@ -129,7 +128,7 @@ public class BDAcceso {
 			carta = cursor.getString(0);
 			descripcion = cursor.getString(9);
 		    if(carta.contains(nombre) || descripcion.contains(nombre)){
-		    	cartas.add(carta);
+		    	cartas.add(cursor.getString(1));
 		    }
 		  } while(cursor.moveToNext());
 		}

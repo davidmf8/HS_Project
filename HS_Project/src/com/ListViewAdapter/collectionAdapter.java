@@ -555,10 +555,11 @@ public class collectionAdapter extends BaseAdapter {
     		R.drawable.c534,
 };
     private int copias = R.drawable.copia1;
-    public collectionAdapter(Context c) {
-        mContext = c;
-    }
  
+    public collectionAdapter(Context c){
+    	mContext = c;
+    }
+    
     public int getCount() {
         return myCollection.length;
     }
