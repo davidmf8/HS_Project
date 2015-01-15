@@ -12,7 +12,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.text.TextUtils;
 
 public class BDLoad extends SQLiteOpenHelper{
-	private String SQLiteCartas = "CREATE TABLE CARTA (nombre TEXT PRIMARY KEY, tipo TEXT, clase TEXT, setteam TEXT, rareza TEXT, tag TEXT, coste INTEGER, ataque INTEGER, salud INTEGER, descripcion TEXT, numcopias INTEGER)";
+	private String SQLiteCartas = "CREATE TABLE CARTA (nombre TEXT, id TEXT PRIMARY KEY, tipo TEXT, clase TEXT, setteam TEXT, rareza TEXT, tag TEXT, coste INTEGER, ataque INTEGER, salud INTEGER, descripcion TEXT, numcopias INTEGER)";
 	private String SQLiteMazos = "CREATE TABLE MAZO (nombre TEXT PRIMARY KEY, numcartas INTEGER, clase TEXT)";
 	private String SQLiteMazosDescargados = "CREATE TABLE MAZODESCARGADO (nombre TEXT PRIMARY KEY, numcartas INTEGER, clase TEXT, fechaactualizacion TEXT)";
 	private Context context;
